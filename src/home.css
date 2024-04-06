@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+#navbar {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 40% 1fr;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 5vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  padding: 2.5vw;
+}
