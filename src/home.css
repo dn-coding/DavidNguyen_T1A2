@@ -57,11 +57,11 @@ button {
   margin-top: 1.5vh;
   background-color: #253237;
   color: white;
-  padding: 0.5vh 4vw;
+  padding: 7.5px 15px;
   border: none;
-  border-radius: 2.5vw;
+  border-radius: 7px;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 footer {
