@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog</title>
-    <link rel="stylesheet" href="blog.css" />
+    <link rel="stylesheet" href="/src/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,28 +18,36 @@
         <div id="logo">DN</div>
 
         <div class="nav-links">
-          <a href="/home.html">Home</a>
-          <a href="/about.html">About</a>
-          <a href="/projects.html">Projects</a>
-          <a href="/blog.html">Blog</a>
-          <a href="/contact.html">Contact</a>
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
         </div>
       </nav>
     </header>
 
     <aside class="blog-list">
       <div>
-        asdffds
+        <h1>Blog Contents</h1>
+        <ul>
+          <li>Blog Post #1</li>
+          <li>Blog Post #2</li>
+          <li>Blog Post #3</li>
+          <li>Blog Post #4</li>
+          <li>Blog Post #5</li>
+        </ul>
       </div>
     </aside>
 
-    <article class="blog-post">
-      <div>
+    <article class="article-container">
+      <div class="blog-container">
         <figure>
-          <img src="/src/images/beaglepuppy.jpg" alt="A beagle puppy" />
+          <img class="blog-photo" src="/src/images/beaglepuppy.jpg" alt="A beagle puppy" />
+          <figcaption>Cute Beagle</figcaption>
         </figure>
         <div>
-          <h2>Lorem ipsum dolor 1</h2>
+          <h2>Blog Post #1</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi odio
             ullam voluptatum corrupti ab itaque quas, dignissimos iure ducimus
@@ -49,12 +57,13 @@
         </div>
       </div>
 
-      <div>
+      <div class="blog-container">
         <figure>
-          <img src="/src/images/cat-and-dog.jpg" alt="A cat sitting on a dog" />
+          <img class="blog-photo" src="/src/images/cat-and-dog.jpg" alt="A cat sitting on a dog" />
+          <figcaption>Partners in crime</figcaption>
         </figure>
         <div>
-          <h2>Lorem ipsum dolor 2</h2>
+          <h2>Blog Post #2</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi odio
             ullam voluptatum corrupti ab itaque quas, dignissimos iure ducimus
@@ -64,12 +73,13 @@
         </div>
       </div>
 
-      <div>
+      <div class="blog-container">
         <figure>
-          <img src="/src/images/french-bulldog-puppy.jpg" alt="A French bullodg puppy" />
+          <img class="blog-photo" src="/src/images/french-bulldog-puppy.jpg" alt="A French bullodg puppy" />
+          <figcaption>Frenchy</figcaption>
         </figure>
         <div>
-          <h2>Lorem ipsum dolor 3</h2>
+          <h2>Blog Post #3</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi odio
             ullam voluptatum corrupti ab itaque quas, dignissimos iure ducimus
@@ -79,12 +89,13 @@
         </div>
       </div>
 
-      <div>
+      <div class="blog-container">
         <figure>
-          <img src="/src/images/smiling-chihuahua.jpg" alt="A smiling chihuahua" />
+          <img class="blog-photo" src="/src/images/smiling-chihuahua.jpg" alt="A smiling chihuahua" />
+          <figcaption>Y'Know what I'm thinkin?</figcaption>
         </figure>
         <div>
-          <h2>Lorem ipsum dolor 4</h2>
+          <h2>Blog Post #4</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi odio
             ullam voluptatum corrupti ab itaque quas, dignissimos iure ducimus
@@ -94,12 +105,13 @@
         </div>
       </div>
 
-      <div>
+      <div class="blog-container">
         <figure>
-          <img src="/src/images/cat-wink.jpg" alt="A cat winking" />
+          <img class="blog-photo" src="/src/images/cat-wink.jpg" alt="A cat winking" />
+          <figcaption>;D</figcaption>
         </figure>
         <div>
-          <h2>Lorem ipsum dolor 5</h2>
+          <h2>Blog Post #5</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi odio
             ullam voluptatum corrupti ab itaque quas, dignissimos iure ducimus
@@ -107,6 +119,7 @@
             architecto!
           </p>
         </div>
+        <a href="">Back to top</a>
       </div>
     </article>
 
