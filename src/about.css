@@ -61,7 +61,7 @@ h1 {
 }
 
 section p {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   margin-bottom: 5%;
 }
 
@@ -110,13 +110,13 @@ footer a {
   
 }
 
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media only screen and (min-width: 250px) and (max-width: 849px) {
   img {
-    max-width: 380px;
+    max-width: 350px;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1300px) {
+@media only screen and (min-width: 850px) and (max-width: 1300px) {
   #navbar {
     font-size: 1rem;
   }
@@ -135,12 +135,16 @@ footer a {
     margin-right: 5vw;
   }
 
-  button {
-    margin-left: 20px;
+  .about-me h1 {
+    font-size: 1.6rem;
   }
 
-  .info {
-    font-size: 1.3rem;
+  .about-me p {
+    font-size: 1rem;
+  }
+
+  button {
+    margin-left: 20px;
   }
 
   footer a {
@@ -171,16 +175,20 @@ footer a {
     margin-right: 5vw;
   }
 
-  .about-me {
+  .about-me { 
     max-width: 850px;
+  }
+
+  .about-me h1 {
+    font-size: 2rem;
+  }
+
+  .about-me p {
+    font-size: 1.2rem;
   }
 
   button {
     margin-left: 20px;
-  }
-
-  .info {
-    font-size: 1.3rem;
   }
 
   footer a {
