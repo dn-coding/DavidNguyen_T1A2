@@ -57,23 +57,23 @@ a {
 }
 
 /* Link colour for unvisited link  */
-aside a:link {
+.blog-list a:link {
   color: blue;
 }
 
 /* Link colour for visited link  */
-aside a:visited {
+.blog-list a:visited {
   color: Purple;
 }
 
 /* Link colour for link when hovered  */
-aside a:hover {
+.blog-list a:hover {
   color: black;
 }
 
 
 
-aside {
+.blog-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -162,7 +162,11 @@ h2 {
 
 /* Appropriate photo width for mobile device */
 .blog-photo {
-  width: 70vw;
+  width: 50vw;
+}
+
+figcaption {
+  padding-top: 1vh;
 }
 
 button {
@@ -201,11 +205,11 @@ footer {
 
 /* Font size relative to the root */
 footer p {
-  font-size: 0.6rem;
+  font-size: 0.7rem;
 }
 
 footer a {
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   /* Removes underline and changes colour of hyperlink */
   text-decoration: none;
   color: white;
@@ -215,14 +219,51 @@ footer a {
 /* Media Query to set and override values to classes at min and max widths in order to give better responsiveness to device users*/
 @media only screen and (min-width: 320px) and (max-width: 849px) {
    /* set a max width to photo */
-  .my-photo, .blog-photo {
+  .my-photo {
     max-width: 350px;
   }
 
-  /* font size to smaller device screen */
+  .blog-photo {
+    max-width: 250px;
+  }
+
+  .article-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .blog-container {
+    flex: 50%;
+    padding-left: 5vw;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.1rem;
+  }
+
   p {
     font-size: 0.9rem;
   }
+
+  figcaption {
+    font-size: 0.8rem;
+  }
+
+  .blog-list a {
+    font-size: 0.9rem;
+  }
+
+  .contact-button {
+    margin-left: 20px;
+  }
+  
+
+
 }
 
 /* Media Query to set and override values to classes at min and max widths in order to give better responsiveness to device users*/
@@ -234,6 +275,21 @@ footer a {
   /* Set the container to a row to place photo and text side by side for a better visual */
   .about-container {
     flex-direction: row;
+  }
+
+  .article-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .blog-container {
+    flex: 50%;
+    padding-left: 5vw;
+  }
+
+  .blog-photo {
+    max-width: 250px;
   }
 
   /* Remove padding to the button links so they are centered */
@@ -253,8 +309,16 @@ footer a {
     font-size: 1.6rem;
   }
 
+  h2 {
+    font-size: 1.3rem;
+  }
+
   p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+  }
+
+  figcaption {
+    font-size: 0.9rem;
   }
 
   /* Margin between buttons so they aren't stuck together */
@@ -281,6 +345,17 @@ footer a {
     flex-direction: row;
   }
 
+  .article-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .blog-container {
+    flex: 50%;
+    padding-left: 5vw;
+  }
+
   /* Remove padding to the button links so they are centered */
   .info-container, .about-container a:not(:last-child) {
     padding-right: 0;
@@ -291,6 +366,10 @@ footer a {
     max-width: 480px;
     width: 25vw;
     margin-right: 5vw;
+  }
+
+  .blog-photo {
+    max-width: 400px;
   }
 
   .about-me { 
@@ -305,8 +384,12 @@ footer a {
     font-size: 2rem;
   }
 
+  h2 {
+    font-size: 1.5rem;
+  }
+
   p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   footer a {
