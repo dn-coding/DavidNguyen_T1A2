@@ -15,7 +15,6 @@ body {
   padding-bottom: 5vh;
 }
 
-
 #navbar {
   /* Grid used to section off logo and navigation links to other pages */
   display: grid;
@@ -56,34 +55,6 @@ a {
   cursor: pointer;
 }
 
-/* Link colour for unvisited link  */
-.blog-list a:link {
-  color: blue;
-}
-
-/* Link colour for visited link  */
-.blog-list a:visited {
-  color: Purple;
-}
-
-/* Link colour for link when hovered  */
-.blog-list a:hover {
-  color: black;
-}
-
-
-
-.blog-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 8vh;
-  padding-bottom: 4vh;
-  background-color: #E0FBFC;
-  text-align: start;
-}
-
 /* Places list on the inner side */
 ul {
   list-style-position: inside;
@@ -106,19 +77,60 @@ ul {
   background-color: #E0FBFC;
 }
 
+
+.inner-project-container {
+  padding-top: 3vh;
+}
+
+.inner-project-container p {
+  text-align: start;
+}
+
+.inner-project-container button {
+  margin: 4vh 0;
+}
+
 /* Had to separate these classes from the one above as it was giving me issues to the blog page, I suspect it was the position property */
-.article-container, .blog-container {
+.article-container, .blog-container, .inner-project-container, .project-container {
   display: flex;
   flex-direction: column;
   background-color: #E0FBFC;
 }
 
+/* Link colour for unvisited link  */
+.blog-list a:link {
+  color: blue;
+}
+
+/* Link colour for visited link  */
+.blog-list a:visited {
+  color: Purple;
+}
+
+/* Link colour for link when hovered  */
+.blog-list a:hover {
+  color: black;
+}
+
+.blog-list, .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8vh;
+  background-color: #E0FBFC;
+  text-align: start;
+}
+
+.blog-container a {
+  padding-bottom: 3vh;
+}
+
 /* Align items and text to the center */
-.blog-container {
+.blog-container, .inner-project-container {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-bottom: 5vh;
 }
 
 /* Align both buttons to the center*/
@@ -133,14 +145,17 @@ ul {
   margin-bottom: 2vh;
 }
 
-.about-container, .article-container {
+.about-container, .article-container, .project-container {
   padding: 0 10vw;
 }
 
 /* Align main text to the start of the container and leaves the heading text centered*/
-.about-container, .article-container p {
+.about-container, .blog-container p {
   text-align: start;
+  padding-bottom: 5vh;
 }
+
+
 
 /* Spacing between heading and text for better visual */
 h1 {
@@ -161,7 +176,7 @@ h2 {
 }
 
 /* Appropriate photo width for mobile device */
-.blog-photo {
+.blog-photo, .project-thumbnail {
   width: 50vw;
 }
 
@@ -223,17 +238,17 @@ footer a {
     max-width: 350px;
   }
 
-  .blog-photo {
+  .blog-photo, .project-thumbnail {
     max-width: 250px;
   }
 
-  .article-container {
+  .article-container, .project-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
   }
 
-  .blog-container {
+  .blog-container, .inner-project-container  {
     flex: 50%;
     padding-left: 5vw;
   }
@@ -277,18 +292,18 @@ footer a {
     flex-direction: row;
   }
 
-  .article-container {
+  .article-container, .project-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
   }
 
-  .blog-container {
+  .blog-container, .inner-project-container  {
     flex: 50%;
     padding-left: 5vw;
   }
 
-  .blog-photo {
+  .blog-photo, .project-thumbnail {
     max-width: 250px;
   }
 
@@ -337,6 +352,10 @@ footer a {
 
 /* Media Query to set and override values to classes at min and max widths in order to give better responsiveness to device users*/
 @media only screen and (min-width: 1301px) {
+  html {
+    background-color: #E0FBFC;
+  }
+
   #navbar {
     font-size: 1rem;
   }
@@ -345,7 +364,7 @@ footer a {
     flex-direction: row;
   }
 
-  .article-container {
+  .article-container, .project-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -354,6 +373,11 @@ footer a {
   .blog-container {
     flex: 50%;
     padding-left: 5vw;
+  }
+
+  .inner-project-container {
+    flex: 25%;
+    padding-left: 2vw;
   }
 
   /* Remove padding to the button links so they are centered */
@@ -370,6 +394,9 @@ footer a {
 
   .blog-photo {
     max-width: 400px;
+  }
+  .project-thumbnail {
+    max-width: 250px
   }
 
   .about-me { 
