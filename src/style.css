@@ -6,15 +6,24 @@
   font-family: Open Sans, sans-serif;
 }
 
-/* Body fills the device screen, just a measure in case there are problems with other elements and positions */
+/*work around for footer not staying at the bottom of the page (I was having a lot of trouble with this because my footer would be in the middle of the screen on my blog page)*/
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
-  min-height: 100vh;
+  padding-bottom: 5vh;
 }
 
+
 #navbar {
+  /* Grid used to section off logo and navigation links to other pages */
   display: grid;
+  /* Gives 20% column space for 1st container and 2nd container will fill in the rest */
+  grid-template-columns: 10% 1fr;
+  /* Aligns items in main axis */
   align-items: center;
-  grid-template-columns: 20% 1fr;
+  /* Gives the navbar a position that will stay at the top of the webpage */
   position: absolute;
   right: 0;
   left: 0;
@@ -26,28 +35,59 @@ body {
 }
 
 /* Center nav links */
-.nav-links {
+.nav-link-bar {
   display: flex;
   justify-content: center;
 }
 
-
-.nav-links a {
+/* Remove underline and applies colour to navbar links */
+.nav-link-bar a {
   color: black;
   text-decoration: none;
-  cursor: pointer;
 }
 
 /* pseudo-class to select every child except the last one */
-a:not(:last-child) {
-  padding-right: 5vw;
+.nav-links:not(:last-child) {
+  padding-right: 7vw;
 }
 
+/* Applies a pointer when mouse is over a link */
+a {
+  cursor: pointer;
+}
+
+/* Link colour for unvisited link  */
+aside a:link {
+  color: blue;
+}
+
+/* Link colour for visited link  */
+aside a:visited {
+  color: Purple;
+}
+
+/* Link colour for link when hovered  */
+aside a:hover {
+  color: black;
+}
+
+
+
 aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-top: 8vh;
   padding-bottom: 4vh;
   background-color: #E0FBFC;
-  text-align: center;
+  text-align: start;
+}
+
+/* Places list on the inner side */
+ul {
+  list-style-position: inside;
+  line-height: 4vh;
 }
 
 .info-container, .about-container {
@@ -56,6 +96,7 @@ aside {
   justify-content: center;
   align-items: center;
   text-align: center;
+  /* Positions the main content under the navbar/header and above the footer */
   position: absolute;
   flex: 1;
   top: 5vh;
@@ -65,14 +106,14 @@ aside {
   background-color: #E0FBFC;
 }
 
-
-
+/* Had to separate these classes from the one above as it was giving me issues to the blog page, I suspect it was the position property */
 .article-container, .blog-container {
   display: flex;
   flex-direction: column;
   background-color: #E0FBFC;
 }
 
+/* Align items and text to the center */
 .blog-container {
   justify-content: center;
   align-items: center;
@@ -80,7 +121,7 @@ aside {
   margin-bottom: 5vh;
 }
 
-/* align both buttons to the center*/
+/* Align both buttons to the center*/
 .about-me {
   display: flex;
   flex-direction: column;
@@ -96,25 +137,30 @@ aside {
   padding: 0 10vw;
 }
 
+/* Align main text to the start of the container and leaves the heading text centered*/
 .about-container, .article-container p {
   text-align: start;
 }
 
+/* Spacing between heading and text for better visual */
 h1 {
   margin-bottom: 2vh;
   text-align: center;
 }
 
+/* Spacing between image, heading and text for better visual */
 h2 {
   margin-top: 2vh;
   margin-bottom: 1.5vh;
 }
 
+/* Appropriate photo width for mobile device */
 .my-photo {
   width: 70vw;
   margin-bottom: 5%;
 }
 
+/* Appropriate photo width for mobile device */
 .blog-photo {
   width: 70vw;
 }
@@ -123,6 +169,7 @@ button {
   margin-top: 1.5vh;
   background-color: #253237;
   color: white;
+  /* Used pixels as the button looked very awkward using vw and vh and the one size looked fine for all breakpoints */
   padding: 7.5px 15px;
   border: none;
   border-radius: 7px;
@@ -132,12 +179,14 @@ button {
 
 footer {
   display: flex;
+  /* Places items at the start and end of container */
   justify-content: space-between;
   align-items: center;
+  /* Position footer at the bottom of page */
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  position: fixed;
   height: 5vh;
   background-color: #5C6B73;
   color: white;
@@ -145,50 +194,58 @@ footer {
   padding: 0 5vw;
 }
 
-footer p {
-  font-size: 0.6rem;
-  text-align: end;
+/* Added for links to be in a row */
+.footer-link-bar {
+  display: flex;
 }
 
+/* Font size relative to the root */
+footer p {
+  font-size: 0.6rem;
+}
 
 footer a {
   font-size: 0.6rem;
+  /* Removes underline and changes colour of hyperlink */
   text-decoration: none;
   color: white;
   
 }
 
-
+/* Media Query to set and override values to classes at min and max widths in order to give better responsiveness to device users*/
 @media only screen and (min-width: 320px) and (max-width: 849px) {
-  .my-photo {
+   /* set a max width to photo */
+  .my-photo, .blog-photo {
     max-width: 350px;
   }
 
+  /* font size to smaller device screen */
   p {
     font-size: 0.9rem;
   }
 }
 
+/* Media Query to set and override values to classes at min and max widths in order to give better responsiveness to device users*/
 @media only screen and (min-width: 850px) and (max-width: 1300px) {
   #navbar {
     font-size: 1rem;
   }
 
-  .info {
-    font-size: 1.3rem;
-  }
-
+  /* Set the container to a row to place photo and text side by side for a better visual */
   .about-container {
     flex-direction: row;
   }
 
+  /* Remove padding to the button links so they are centered */
   .about-container a:not(:last-child) {
     padding-right: 0;
   } 
 
+  /* Set a suitable width and max width of photos for devices */
   .my-photo {
     min-width: 380px;
     width: 30vw;
+  /* Margin between photo and text */
     margin-right: 5vw;
   }
 
@@ -200,6 +257,7 @@ footer a {
     font-size: 1rem;
   }
 
+  /* Margin between buttons so they aren't stuck together */
   .contact-button {
     margin-left: 20px;
   }
@@ -213,6 +271,7 @@ footer a {
   }
 }
 
+/* Media Query to set and override values to classes at min and max widths in order to give better responsiveness to device users*/
 @media only screen and (min-width: 1301px) {
   #navbar {
     font-size: 1rem;
@@ -222,6 +281,7 @@ footer a {
     flex-direction: row;
   }
 
+  /* Remove padding to the button links so they are centered */
   .info-container, .about-container a:not(:last-child) {
     padding-right: 0;
   } 

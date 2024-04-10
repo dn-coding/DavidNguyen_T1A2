@@ -15,27 +15,38 @@
   <body>
     <header>
       <nav id="navbar">
-        <div id="logo">DN</div>
-
-        <div class="nav-links">
-          <a href="home.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="projects.html">Projects</a>
-          <a href="blog.html">Blog</a>
-          <a href="contact.html">Contact</a>
+        <div>DN</div>
+        <div class="nav-link-bar">
+          <div class="nav-links">
+            <a href="home.html">Home</a>
+          </div>
+          <div class="nav-links">
+            <a href="about.html">About</a>
+          </div>
+          <div class="nav-links">
+            <a href="projects.html">Projects</a>
+          </div>
+          <div class="nav-links">
+            <a href="blog.html">Blog</a>
+          </div>
+          <div class="nav-links">
+            <a href="contact.html">Contact</a>
+          </div>
         </div>
       </nav>
     </header>
 
     <aside class="blog-list">
-      <div>
+      <div>       
         <h1>Blog Contents</h1>
+      </div>
+      <div>
         <ul>
-          <li>Blog Post #1</li>
-          <li>Blog Post #2</li>
-          <li>Blog Post #3</li>
-          <li>Blog Post #4</li>
-          <li>Blog Post #5</li>
+          <a href="#blog-post-1"><li>Blog Post #1</li></a>
+          <a href="#blog-post-2"><li>Blog Post #2</li></a>
+          <a href="#blog-post-3"><li>Blog Post #3</li></a>
+          <a href="#blog-post-4"><li>Blog Post #4</li></a>
+          <a href="#blog-post-5"><li>Blog Post #5</li></a>
         </ul>
       </div>
     </aside>
@@ -43,7 +54,7 @@
     <article class="article-container">
       <div class="blog-container">
         <figure>
-          <img class="blog-photo" src="/src/images/beaglepuppy.jpg" alt="A beagle puppy" />
+          <img id="blog-post-1" class="blog-photo" src="/src/images/beaglepuppy.jpg" alt="A beagle puppy" />
           <figcaption>Cute Beagle</figcaption>
         </figure>
         <div>
@@ -59,7 +70,7 @@
 
       <div class="blog-container">
         <figure>
-          <img class="blog-photo" src="/src/images/cat-and-dog.jpg" alt="A cat sitting on a dog" />
+          <img id="blog-post-2" class="blog-photo" src="/src/images/cat-and-dog.jpg" alt="A cat sitting on a dog" />
           <figcaption>Partners in crime</figcaption>
         </figure>
         <div>
@@ -75,7 +86,7 @@
 
       <div class="blog-container">
         <figure>
-          <img class="blog-photo" src="/src/images/french-bulldog-puppy.jpg" alt="A French bullodg puppy" />
+          <img id="blog-post-3" class="blog-photo" src="/src/images/french-bulldog-puppy.jpg" alt="A French bullodg puppy" />
           <figcaption>Frenchy</figcaption>
         </figure>
         <div>
@@ -91,7 +102,7 @@
 
       <div class="blog-container">
         <figure>
-          <img class="blog-photo" src="/src/images/smiling-chihuahua.jpg" alt="A smiling chihuahua" />
+          <img id="blog-post-4" class="blog-photo" src="/src/images/smiling-chihuahua.jpg" alt="A smiling chihuahua" />
           <figcaption>Y'Know what I'm thinkin?</figcaption>
         </figure>
         <div>
@@ -107,7 +118,7 @@
 
       <div class="blog-container">
         <figure>
-          <img class="blog-photo" src="/src/images/cat-wink.jpg" alt="A cat winking" />
+          <img id="blog-post-5" class="blog-photo" src="/src/images/cat-wink.jpg" alt="A cat winking" />
           <figcaption>;D</figcaption>
         </figure>
         <div>
@@ -124,9 +135,13 @@
     </article>
 
     <footer>
-      <div>
-        <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
+      <div class="footer-link-bar">
+        <div class="nav-links">
+          <a href="/about.html">About</a>
+        </div>
+        <div class="nav-links">
+          <a href="/contact.html">Contact</a>
+        </div>
       </div>
       <div>
         <p>&copy; 2024 Copyright: dn-coding</p>
