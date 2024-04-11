@@ -1,0 +1,208 @@
+* {
+  /* Reset point */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Open Sans, sans-serif;
+}
+
+body {
+  /* Vertically positions the header, body and footer*/
+  display: flex;
+  flex-direction: column;
+  /* Body occupies 100% of the viewport height */
+  min-height: 100vh;
+}
+
+#navbar {
+  display: flex;
+  /* Horizontally positions the containers in the navbar */
+  flex-direction: row; 
+  /* Adds a space between the containers. In this case between the start and end */
+  justify-content: space-between;
+  /* Centers items on the cross axis */
+  align-items: center;
+  /* Creates space around the element content */
+  padding: 2vh 5vw;
+  font-size: 0.8rem;
+}
+
+.nav-link-bar {
+  display: flex;
+  /* Spacing between container columns */
+  column-gap: 6vw;
+}
+
+/* Change font colour and removes underline from hyperlinks */
+.nav-link-bar a {
+  color: black;
+  text-decoration: none;
+}
+
+section, article {
+  /* Allows section to grow and expand to take up the remainder of the viewpoint height */
+  flex-grow: 1;
+  background-color: #E0FBFC;
+  padding: 5vh 10vw;
+}
+
+
+article {
+  display: flex;
+  flex-direction: column;
+  /* Gives a gap between each project container */
+  row-gap: 10vw;
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  background-color: #E0FBFC;
+  padding-top: 4.5vh;
+  align-items: center;
+}
+
+.blog-list a {
+  /* Spacing between blog post list items */
+  line-height: 4vh;
+}
+
+/* Link colour for unvisited link  */
+.blog-list a:link, .blog-container a:visited {
+  color: black;
+}
+
+/* Link colour for visited link  */
+.blog-list a:visited, .blog-container a:visited {
+  color: Black;
+}
+
+/* Link colour for link when hovered  */
+.blog-list a:hover, .blog-container a:visited {
+  color: Black;
+}
+
+
+.about-container, .project-container, .blog-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Gives a gap between text and buttons */
+  row-gap: 3vh;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* Gives a gap between icon and text */
+  column-gap: 5vw;
+  /* Gives a gap between each contact container*/
+  margin-bottom: 2vh;
+}
+
+/* Places container in the center of the page */
+.info-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-container button {
+  margin-top: 2vh;
+}
+
+.info-text {
+  margin-bottom: 3vh;
+}
+
+.about-me p {
+  margin-bottom: 2vh;
+}
+
+.about-me h1 {
+  margin-top: 2vh;
+}
+
+/* Spacing for texts and items under, suitable font sizes and image sizes for mobile first approach */
+h1 {
+  text-align: center;
+  margin-bottom: 2vh;
+  font-size: 1.5rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  padding-bottom: 1.5vh;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.my-photo {
+  width: 70vw;
+}
+
+.project-thumbnail, .blog-photo {
+  max-width: 250px;
+}
+
+.icon-logo {
+  width: 10vw;
+}
+
+button {
+  background-color: #253237;
+  color: white;
+  /* Used pixels as the button looked very awkward using vw and vh and the one size looked fine for all breakpoints */
+  padding: 7.5px 15px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.about-me-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 5vw;
+  background-color: #5C6B73;
+}
+
+footer a, footer p {
+  color: white;
+  text-decoration: none;
+  font-size: 0.7rem;
+}
+
+.footer-link {
+  display: flex;
+  column-gap: 5vw;
+}
+
+/* Responsiveness for smaller device screens*/
+
+@media only screen and (max-width: 700px) {
+  
+}

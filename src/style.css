@@ -10,6 +10,7 @@
 html {
   position: relative;
   min-height: 100%;
+  background-color: #E0FBFC;
 }
 body {
   padding-bottom: 5vh;
@@ -364,9 +365,7 @@ footer a {
 
 /* Media Query to set and override values to classes at min and max widths in order to give better responsiveness to device users*/
 @media only screen and (min-width: 1301px) {
-  html {
-    background-color: #E0FBFC;
-  }
+
 
   #navbar {
     font-size: 1rem;
