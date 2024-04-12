@@ -12,8 +12,9 @@ body {
   display: flex;
   /* Vertically positions the header, body and footer*/
   flex-direction: column;
-  /* Body occupies 100% of the viewport height */
+  /* Body occupies 100% of the viewport height/width */
   min-height: 100vh;
+  min-width: 100vw;
 }
 
 #navbar {
@@ -25,6 +26,7 @@ body {
   padding: 2vh 5vw;
   /* sets font size relative to the root element. Default is 16px on most browsers */
   font-size: 0.8rem;
+  font-weight: 500;
 }
 
 .nav-link-bar {
@@ -73,18 +75,25 @@ article {
   line-height: 4vh;
 }
 
+.backtotop {
+  display: flex;
+  justify-content: center;
+  background-color: #E0FBFC;
+  padding-bottom: 5vh;
+}
+
 /* Link colour for unvisited link  */
-.blog-list a:link, .blog-container a:visited {
+.blog-list a:link, .backtotop a:visited {
   color: black;
 }
 
 /* Link colour for visited link  */
-.blog-list a:visited, .blog-container a:visited {
+.blog-list a:visited, .backtotop a:visited {
   color: Black;
 }
 
 /* Link colour for link when hovered  */
-.blog-list a:hover, .blog-container a:visited {
+.blog-list a:hover, .backtotop a:visited {
   color: Black;
 }
 
@@ -108,6 +117,17 @@ article {
   column-gap: 5vw;
   /* Gives a gap between each contact container*/
   margin-bottom: 2vh;
+}
+
+.project-container, .blog-container {
+  background-color: #C2DFE3;
+  /* 1px border width and solid style */
+  border: 1px solid #9DB4C0;
+  /* Shadow for the container, 0 for vertical and horizontal, 5px for the blur */
+  box-shadow: 0px 0px 5px #5C6B73;
+  /* Roundness to the corners of the border */
+  border-radius: 6px;
+  padding: 4vh 2vw;
 }
 
 /* Places container in the center of the page */
@@ -171,8 +191,7 @@ p {
 .publish-date {
   text-align: start;
   font-size: 0.85rem;
-  margin-top: -1vh;
-  margin-bottom: 1vh;
+  margin-bottom: 2vh;
 }
 
 figcaption {
@@ -183,6 +202,13 @@ figcaption {
 .my-photo {
   width: 70vw;
   max-width: 350px;
+}
+
+.blog-photo {
+  /* Circle photos with a border */
+  border-radius: 125px;
+  /* 4px border width, solid style */
+  border: 4px solid #5C6B73;
 }
 
 .project-thumbnail, .blog-photo {
@@ -207,6 +233,8 @@ button {
   border-radius: 7px;
   /* A pointer cursor shown when cursor is over a button  */
   cursor: pointer;
+  /* box shadow of 0 in x/y positon and 5px in blur */
+  box-shadow: 0 0 5px #5C6B73;
   /* Bolder text */
   font-weight: 600;
   font-size: 0.9rem;
@@ -223,7 +251,7 @@ button {
 
 footer {
   display: flex;
-  /* Gives equal space between content in the footer */
+  /* Gives equal space around containers in the footer */
   justify-content: space-between;
   align-items: center;
   padding: 2vh 5vw;
@@ -235,6 +263,7 @@ footer a, footer p {
   /* Removes underline from hyperlink */
   text-decoration: none;
   font-size: 0.7rem;
+  font-weight: 500;
 }
 
 .footer-link {
@@ -242,6 +271,7 @@ footer a, footer p {
   /* Spacing between links */
   column-gap: 5vw;
 }
+
 
 /* Responsiveness for tablet devices */
 @media only screen and (min-width: 750px) and (max-width: 1199px) {
@@ -252,13 +282,17 @@ footer a, footer p {
     /* Forces the flex containers to stay within the page extents */
     flex-wrap: wrap;
     padding: 5vh 5vw;
-    /* Gives a gap between each pair of container */
-    justify-content: space-between;
+    column-gap: 5vw;
   }
 
-  .project-container, .blog-container {
-    /* Each container element will take 50% of width. 3vw will be the space between each pair */
-    width: calc(50% - 3vw); 
+  /* Each selected element will take 50% of space in its container and the - 10vw gives the space for the column gap*/
+  .blog-container, .project-container {
+    flex: calc(50% - 10vw);
+    
+  }
+
+  .blog-container p, .project-container p {
+    padding: 0 2vw;
   }
 
   .contact-section {
@@ -313,6 +347,15 @@ footer a, footer p {
     padding: 5vh 5vw;
     /* Gives a gap between each pair of container */
     justify-content: space-between;
+
+  }
+
+  /* Centered column direction  to give better responsiveness to large screens */
+  .blog-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   /* Changed from column to row and added column gap */
@@ -347,11 +390,19 @@ footer a, footer p {
     /* Positions items to the start of the container */
     align-items: start;
     justify-content: center;
+    max-width: 1500px;
   }
 
   /* Showing all 4 projects in 1 line with space in between containers */
   .project-container {
-    width: calc(25% - 3vw);
+    width: calc(25% - 5vw);
+    /* Causes the photo not to overflow outside of container */
+    min-width: 300px;
+  }
+
+  /* Hides back to top link for projects.html at this breakpoint */
+  .projects-backtotop {
+    display: none;
   }
 
   /* Suitable font sizes for selects/elements below */
