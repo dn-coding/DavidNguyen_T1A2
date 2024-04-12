@@ -1,10 +1,20 @@
+<!-- Delcares the version of HTML the document -->
 <!DOCTYPE html>
+<!-- lang=en Sets the language for the document -->
 <html lang="en">
   <head>
+    <!-- Character set UTF-8 is used because it has almost every character and symbol -->
     <meta charset="UTF-8" />
+    <!-- Determines how viewport dimension and scaling is controlled by the browser for a responsive web design:
+    - name="viewport" gives a name for the metadata
+    - content="width=device-width" sets the content width relative to the device's screen width
+    - "initial-scale1.0" sets the zoom level to 1.0-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the page that appears on the browser tab -->
     <title>Projects</title>
+    <!-- links the HTML and CSS sheet -->
     <link rel="stylesheet" href="/src/style.css" />
+    <!-- links the custom font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,37 +23,45 @@
     />
   </head>
   <body>
-    <header>
-      <nav id="navbar">
-        <div id="logo">
-          DN
-        </div>
-        <div class="nav-link-bar">
-          <div class="nav-links">
-            <a href="/src/home.html">Home</a>
-          </div>
-          <div class="nav-links">
-            <a href="/src/about.html">About</a>
-          </div>
-          <div class="nav-links">
-            <a href="/src/projects.html">Projects</a>
-          </div>
-          <div class="nav-links">
-            <a href="/src/blog.html">Blog</a>
-          </div>
-          <div class="nav-links">
-            <a href="/src/contact.html">Contact</a>
-          </div>
-        </div>
-      </nav>
-    </header>
 
+    <!-- Classes have been given to elements to create CSS properties for each one -->
+
+    <!-- Semantic element for navigation bar. ID given to create CSS properties-->
+    <nav id="navbar">
+      <!-- Created two div containers to separate logo from links -->
+      <div id="logo">
+        DN
+      </div>
+      <div class="nav-link-bar">
+        <!-- Div containers to further separate links from each other. Classes given to create CSS properties -->
+        <div class="nav-links">
+          <a href="/src/home.html">Home</a>
+        </div>
+        <div class="nav-links">
+          <a href="/src/about.html">About</a>
+        </div>
+        <div class="nav-links">
+          <a href="/src/projects.html">Projects</a>
+        </div>
+        <div class="nav-links">
+          <a href="/src/blog.html">Blog</a>
+        </div>
+        <div class="nav-links">
+          <a href="/src/contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Created a div for the page heading to separate from the article container-->
     <div class="main-heading">
       <h1>Projects</h1>
     </div>
 
+    <!-- Semantic element for am article -->
     <article>
+      <!-- Divs created for each project to separate from each other  -->
       <div class="project-container">
+        <!-- Semantic element for photos provided -->
         <figure>
           <img class="project-thumbnail" src="/src/images/computer-program-coding-screen.jpg" alt="A placeholder project picture" />
         </figure>
@@ -56,10 +74,12 @@
             architecto!
           </p>
         </div>
+        <!-- Button wrapped as a link to github in a new browser tab -->
         <a target="_blank" href="https://github.com"><button>View on Github</button></a>
       </div>
 
       <div class="project-container">
+        <!-- Semantic element for photos provided -->
         <figure>
           <img class="project-thumbnail" src="/src/images/computer-program-coding-screen.jpg" alt="A placeholder project picture" />
         </figure>
@@ -72,10 +92,12 @@
             architecto!
           </p>
         </div>
+        <!-- Button wrapped as a link to github in a new browser tab -->
         <a target="_blank" href="https://github.com"><button>View on Github</button></a>
       </div>
 
       <div class="project-container">
+        <!-- Semantic element for photos provided -->
         <figure>
           <img class="project-thumbnail" src="/src/images/computer-program-coding-screen.jpg" alt="A placeholder project picture" />
         </figure>
@@ -88,10 +110,12 @@
             architecto!
           </p>
         </div>
+        <!-- Button wrapped as a link to github in a new browser tab -->
         <a target="_blank" href="https://github.com"><button>View on Github</button></a>
       </div>
 
       <div class="project-container">
+        <!-- Semantic element for photos provided -->
         <figure>
           <img class="project-thumbnail" src="/src/images/computer-program-coding-screen.jpg" alt="A placeholder project picture" />
         </figure>
@@ -104,12 +128,16 @@
             architecto!
           </p>
         </div>
+        <!-- Button wrapped as a link to github in a new browser tab -->
         <a target="_blank" href="https://github.com"><button>View on Github</button></a>
       </div>
     </article>
 
+    <!-- Semantic element for a footer -->
     <footer>
+      <!-- Created 3 Divs to separate from each other-->
       <div class="footer-link">
+        <!-- Footer links to about and contact pages -->
         <div>
           <a href="/src/about.html">About</a>
         </div>
@@ -118,6 +146,7 @@
         </div>
       </div>
       <div>
+        <!-- Copyright logo -->
         <p>&copy; 2024 Copyright: dn-coding</p>
       </div>
     </footer>

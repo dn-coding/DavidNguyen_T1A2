@@ -1,10 +1,21 @@
+<!-- Delcares the version of HTML the document -->
 <!DOCTYPE html>
+
+<!-- lang=en Sets the language for the document -->
 <html lang="en">
   <head>
+    <!-- Character set UTF-8 is used because it has almost every character and symbol -->
     <meta charset="UTF-8" />
+    <!-- Determines how viewport dimension and scaling is controlled by the browser for a responsive web design:
+    - name="viewport" gives a name for the metadata
+    - content="width=device-width" sets the content width relative to the device's screen width
+    - "initial-scale1.0" sets the zoom level to 1.0-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the page that appears on the browser tab -->
     <title>My Blog</title>
+    <!-- links the HTML and CSS sheet -->
     <link rel="stylesheet" href="/src/style.css" />
+    <!-- links the custom font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,52 +24,68 @@
     />
   </head>
   <body>
-    <header>
-      <nav id="navbar">
-        <div id="logo">
-          DN
-        </div>
-        <div class="nav-link-bar">
-          <div class="nav-links">
-            <a href="/src/home.html">Home</a>
-          </div>
-          <div class="nav-links">
-            <a href="/src/about.html">About</a>
-          </div>
-          <div class="nav-links">
-            <a href="/src/projects.html">Projects</a>
-          </div>
-          <div class="nav-links">
-            <a href="/src/blog.html">Blog</a>
-          </div>
-          <div class="nav-links">
-            <a href="/src/contact.html">Contact</a>
-          </div>
-        </div>
-      </nav>
-    </header>
 
+    <!-- Classes have been given to elements to create CSS properties for each one -->
+
+    <!-- Semantic element for navigation bar. ID given to create CSS properties-->
+    <nav id="navbar">
+      <!-- Created two div containers to separate logo from links -->
+      <div id="logo">
+        DN
+      </div>
+      <div class="nav-link-bar">
+        <!-- Div containers to further separate links from each other. Classes given to create CSS properties -->
+        <div class="nav-links">
+          <a href="/src/home.html">Home</a>
+        </div>
+        <div class="nav-links">
+          <a href="/src/about.html">About</a>
+        </div>
+        <div class="nav-links">
+          <a href="/src/projects.html">Projects</a>
+        </div>
+        <div class="nav-links">
+          <a href="/src/blog.html">Blog</a>
+        </div>
+        <div class="nav-links">
+          <a href="/src/contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Divs for the blog heading and list  -->
     <div class="blog-list">
       <div>       
         <h1>Blog Contents</h1>
       </div>
+      <!-- Unordered list for blog posts with titles and headings. Created "go to" links to each blog post to give a better experience -->
       <div>
         <ul>
           <a href="#blog-post-1"><li>Blog Post #1</li></a>
+          <p class="publish-date">Date Published: January 10, 2023</p>
           <a href="#blog-post-2"><li>Blog Post #2</li></a>
+          <p class="publish-date">Date Published: March 24, 2023</p>
           <a href="#blog-post-3"><li>Blog Post #3</li></a>
+          <p class="publish-date">Date Published: June 4, 2023</p>
           <a href="#blog-post-4"><li>Blog Post #4</li></a>
+          <p class="publish-date">Date Published: July 21, 2023</p>
           <a href="#blog-post-5"><li>Blog Post #5</li></a>
+          <p class="publish-date">Date Published: February 19, 2024</p>
         </ul>
       </div>
     </div>
 
+    <!-- Semantic element for blog posts -->
     <article>
+      <!-- Created a div for each blog post for clear separation from each other -->
       <div class="blog-container">
+        <!-- Semantic element for photos provided -->
         <figure>
-          <img id="blog-post-1" class="blog-photo" src="/src/images/beaglepuppy.jpg" alt="A beagle puppy" />
+          <img class="blog-photo" src="/src/images/beaglepuppy.jpg" alt="A beagle puppy" />
+          <!-- Semantic element to define a caption for the figure element -->
           <figcaption>Cute Beagle</figcaption>
         </figure>
+        <!-- Div added to separate the figure from the title and text of blog post -->
         <div>
           <h2>Blog Post #1</h2>
           <p>
@@ -71,10 +98,13 @@
       </div>
 
       <div class="blog-container">
+        <!-- Semantic element for photos provided -->
         <figure>
-          <img id="blog-post-2" class="blog-photo" src="/src/images/cat-and-dog.jpg" alt="A cat sitting on a dog" />
+          <img class="blog-photo" src="/src/images/cat-and-dog.jpg" alt="A cat sitting on a dog" />
+          <!-- Semantic element to define a caption for the figure element -->
           <figcaption>Partners in crime</figcaption>
         </figure>
+        <!-- Div added to separate the figure from the title and text of blog post -->
         <div>
           <h2>Blog Post #2</h2>
           <p>
@@ -87,10 +117,13 @@
       </div>
 
       <div class="blog-container">
+        <!-- Semantic element for photos provided -->
         <figure>
-          <img id="blog-post-3" class="blog-photo" src="/src/images/french-bulldog-puppy.jpg" alt="A French bullodg puppy" />
+          <img class="blog-photo" src="/src/images/french-bulldog-puppy.jpg" alt="A French bullodg puppy" />
+          <!-- Semantic element to define a caption for the figure element -->
           <figcaption>Frenchy</figcaption>
         </figure>
+        <!-- Div added to separate the figure from the title and text of blog post -->
         <div>
           <h2>Blog Post #3</h2>
           <p>
@@ -103,10 +136,13 @@
       </div>
 
       <div class="blog-container">
+        <!-- Semantic element for photos provided -->
         <figure>
-          <img id="blog-post-4" class="blog-photo" src="/src/images/smiling-chihuahua.jpg" alt="A smiling chihuahua" />
+          <img class="blog-photo" src="/src/images/smiling-chihuahua.jpg" alt="A smiling chihuahua" />
+          <!-- Semantic element to define a caption for the figure element -->
           <figcaption>Y'Know what I'm thinkin?</figcaption>
         </figure>
+        <!-- Div added to separate the figure from the title and text of blog post -->
         <div>
           <h2>Blog Post #4</h2>
           <p>
@@ -119,10 +155,13 @@
       </div>
 
       <div class="blog-container">
+        <!-- Semantic element for photos provided -->
         <figure>
-          <img id="blog-post-5" class="blog-photo" src="/src/images/cat-wink.jpg" alt="A cat winking" />
+          <img class="blog-photo" src="/src/images/cat-wink.jpg" alt="A cat winking" />
+          <!-- Semantic element to define a caption for the figure element -->
           <figcaption>;D</figcaption>
         </figure>
+        <!-- Div added to separate the figure from the title and text of blog post -->
         <div>
           <h2>Blog Post #5</h2>
           <p>
@@ -138,8 +177,11 @@
       </div>
     </article>
 
+    <!-- Semantic element for a footer -->
     <footer>
+      <!-- Created 3 Divs to separate from each other-->
       <div class="footer-link">
+        <!-- Footer links to about and contact pages -->
         <div>
           <a href="/src/about.html">About</a>
         </div>
@@ -148,9 +190,11 @@
         </div>
       </div>
       <div>
+        <!-- "go to" link to go back to the top of page -->
         <a href="">Back to top</a>
       </div>
       <div>
+        <!-- Copyright logo -->
         <p>&copy; 2024 Copyright: dn-coding</p>
       </div>
     </footer>
