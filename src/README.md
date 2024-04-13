@@ -24,7 +24,7 @@
   *  Increasing/decreasing the font and image sizes when viewing on certain devices will improve visbility and user experience. 
   *  Adjusting flexbox layouts on different breakpoints gives a better viewing experience as pages are not cluttered and content is not compressed.  
     
-  For pages such as the Blog page where there is more content and the page is longer, links were created to help navigate with ease from top to blog post and back to the top when at the end of the page. 
+  For pages such as the Blog page where there is more content and the page is longer, links were created to help navigate with ease from top to blog post and back to the top when at the end of the page. A tablet and mobile wireframe was not made for the Home page because it shared the same layout and this was also the case with the mobile wireframe for the About page which used the same layout as the tablet wireframe. 
 
   Components such as fonts, headings, buttons, containers and images have been styled and given properties such as borders, shadows, sizes, colours and spacing to engage the user.
   Semantic elements I have used such as nav, section, article, footer, headings and paragraphs which give their meanings to the user and browser.
