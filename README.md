@@ -30,17 +30,17 @@
   Semantic elements I have used such as nav, section, article, footer, headings and paragraphs which give their meanings to the user and browser.
 
   #### Desktop Users
-  ![Home and About pages for desktop users](./src/docs/home-about.jpg)  
-  ![Project and Blog pages for desktop users](./src/docs/project-blog.jpg)  
-  ![Contact page for desktop users](./src/docs/contactpage-desktop.JPG)  
+  ![Home and About pages for desktop users](./docs/home-about.jpg)  
+  ![Project and Blog pages for desktop users](./docs/project-blog.jpg)  
+  ![Contact page for desktop users](./docs/home-about.jpg)  
 
   #### Tablet Users ####  
     
-  ![About, Blog and Project pages for tablet users](./src/docs/tablet-pages.jpg) 
+  ![About, Blog and Project pages for tablet users](./docs/tablet-pages.jpg) 
 
   #### Mobile Users ####  
     
-  ![Blog and Project pages for mobile users](./src/docs/mobile-pages.PNG)
+  ![Blog and Project pages for mobile users](./docs/mobile-pages.PNG)
 
   
 **The target audience for my website are:**  
