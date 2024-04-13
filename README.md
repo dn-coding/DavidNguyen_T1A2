@@ -13,7 +13,7 @@
 
   The main page is the Home Page which can access all other pages via a navigation bar. This is also available to every page as the navigation bar has been created for each document. By doing so it gives the user a better, faster and simple experience when using the website.
 
-  ![Sitemap](./src/docs/Screenshots/sitemap.JPG)  
+  ![Sitemap](./docs/sitemap.JPG)  
   
   ### Wireframe Pages ### 
   
