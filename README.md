@@ -32,7 +32,7 @@
   #### Desktop Users
   ![Home and About pages for desktop users](./docs/home-about.jpg)  
   ![Project and Blog pages for desktop users](./docs/project-blog.jpg)  
-  ![Contact page for desktop users](./docs/home-about.jpg)  
+  ![Contact page for desktop users](./docs/contactpage-desktop.JPG)  
 
   #### Tablet Users ####  
     
@@ -40,7 +40,7 @@
 
   #### Mobile Users ####  
     
-  ![Blog and Project pages for mobile users](./docs/mobile-pages.PNG)
+  ![Blog and Project pages for mobile users](./docs/mobile-pages.jpg)
 
   
 **The target audience for my website are:**  
