@@ -29,17 +29,17 @@
   Components such as fonts, headings, buttons, containers and images have been styled and given properties such as borders, shadows, sizes, colours and spacing to engage the user.
 
   #### Desktop Users
-  ![Home and About pages for desktop users](./src/docs/Screenshots/home-about.jpg)  
-  ![Project and Blog pages for desktop users](./src/docs/Screenshots/project-blog.jpg)  
-  ![Project and Blog pages for desktop users](./src/docs/Screenshots/contactpage-desktop.JPG)  
+  ![Home and About pages for desktop users](./src/docs/screenshots/home-about.jpg)  
+  ![Project and Blog pages for desktop users](./src/docs/screenshots/project-blog.jpg)  
+  ![Contact page for desktop users](./src/docs/screenshots/contactpage-desktop.JPG)  
 
   #### Tablet Users ####  
     
-  ![About, Blog and Project pages for tablet users](./src/docs/Screenshots/tablet-pages.jpg) 
+  ![About, Blog and Project pages for tablet users](./src/docs/screenshots/tablet-pages.jpg) 
 
   #### Mobile Users ####  
     
-  ![Blog and Project pages for mobile users](./src/docs/Screenshots/mobile-pages.PNG)
+  ![Blog and Project pages for mobile users](./src/docs/screenshots/mobile-pages.PNG)
 
   
 **The target audience for my website are:**  
