@@ -27,6 +27,7 @@
   For pages such as the Blog page where there is more content and the page is longer, links were created to help navigate with ease from top to blog post and back to the top when at the end of the page. 
 
   Components such as fonts, headings, buttons, containers and images have been styled and given properties such as borders, shadows, sizes, colours and spacing to engage the user.
+  Semantic elements I have used such as nav, section, article, footer, headings and paragraphs which give their meanings to the user and browser.
 
   #### Desktop Users
   ![Home and About pages for desktop users](./src/docs/home-about.jpg)  
