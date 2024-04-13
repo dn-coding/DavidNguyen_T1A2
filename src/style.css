@@ -7,6 +7,8 @@
   font-family: "Open Sans", sans-serif;
 }
 
+  /* CSS properties have been created for a mobile first approach */
+
 body {
   /* Flexbox layout */
   display: flex;
@@ -16,6 +18,7 @@ body {
   min-height: 100vh;
   min-width: 100vw;
 }
+
 
 #navbar {
   /* Grid layout  */
@@ -233,11 +236,16 @@ button {
   border-radius: 7px;
   /* A pointer cursor shown when cursor is over a button  */
   cursor: pointer;
-  /* box shadow of 0 in x/y positon and 5px in blur */
-  box-shadow: 0 0 5px #5C6B73;
   /* Bolder text */
   font-weight: 600;
   font-size: 0.9rem;
+  /* shadow will grow to its full size and blur over 0.75s and it will have a slower start and end with ease-in-out giving a smoother animation */
+  transition: 0.75s ease-in-out;
+}
+
+button:hover {
+  /* box shadow of 0 in x/y positon and 5px in blur */
+  box-shadow: 0 0 5px #5C6B73;
 }
 
 .about-me-buttons {
@@ -285,7 +293,7 @@ footer a, footer p {
     column-gap: 5vw;
   }
 
-  /* Each selected element will take 50% of space in its container and the - 10vw gives the space for the column gap*/
+  /* blog and project container will take 50% of space and the - 10vw gives the space for the column gap*/
   .blog-container, .project-container {
     flex: calc(50% - 10vw);
     
@@ -306,7 +314,7 @@ footer a, footer p {
     column-gap: 40px;
   }
   
-  /* Suitable font sizes for selects/elements below */
+  /* Suitable font sizes for selectors/elements below */
   h1 {
     font-size: 1.8rem;
   }
